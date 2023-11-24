@@ -18,25 +18,57 @@
         android:padding="5dp"
         android:text="DATOS" />
 
-    <EditText
-        android:id="@+id/txtNombreMain"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="nombre"
-        android:inputType="text"
-        android:padding="5dp" />
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/txtEdadMain"
+        <EditText
+            android:id="@+id/txtNombreMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="nombre"
+            android:inputType="text"
+            android:padding="5dp" />
+
+        <ImageButton
+            android:id="@+id/btnBorrarNombreMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@android:drawable/btn_dialog" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="edad"
-        android:inputType="number"
-        android:padding="5dp" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtEdadMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="edad"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <ImageButton
+            android:id="@+id/btnBorrarEdadMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@android:drawable/btn_dialog"
+            android:tint="#00FFFFFF" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnGuardarMain"
@@ -45,4 +77,10 @@
         android:layout_marginTop="10dp"
         android:padding="5dp"
         android:text="guardar" />
+
+    <Button
+        android:id="@+id/btnBorrarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Borrar" />
 </LinearLayout>

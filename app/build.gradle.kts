@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "montacer.elfazazi.ejemplo1sharedpreferencestema2pmdm"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "montacer.elfazazi.ejemplo1sharedpreferencestema2pmdm"
