@@ -2,6 +2,7 @@ package montacer.elfazazi.ejemplo1sharedpreferencestema2pmdm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtEdad;
     private Button btnGuardar;
     private Button btnBorrarTodo;
+    private Button btnJson;
     private ImageButton btnBorrarNombre;
     private ImageButton btnBorrarEdad;
     private SharedPreferences sp;
@@ -81,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnJson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, JsonActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void rellenarDatos() {
@@ -102,5 +112,6 @@ public class MainActivity extends AppCompatActivity {
         btnBorrarTodo = findViewById(R.id.btnBorrarMain);
         btnBorrarNombre = findViewById(R.id.btnBorrarNombreMain);
         btnBorrarEdad = findViewById(R.id.btnBorrarEdadMain);
+        btnJson = findViewById(R.id.btnJsonMain);
     }
 }
